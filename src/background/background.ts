@@ -2,7 +2,7 @@ import { buildAuthUrl, exchangeCodeForToken, refreshAccessToken, revokeToken } f
 import { decryptOrgArray, encryptOrgArray } from '../common/crypto'
 import type { BackgroundMessage, OAuthConfig, SalesforceOrg } from '../types'
 
-chrome.runtime.onMessage.addListener((message: BackgroundMessage, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message: BackgroundMessage, _sender, sendResponse) => {
   if (message.action === 'openAndLogin') {
     handleOpenAndLogin(message.org!)
     return true
