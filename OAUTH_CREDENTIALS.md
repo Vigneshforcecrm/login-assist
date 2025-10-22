@@ -8,12 +8,12 @@ These credentials have been shared by the user for configuring the extension:
 
 **Consumer Key (Client ID):**
 ```
-3MVG9PwZx9R6_Urdu_8Q5G0JlxXoog.3CrPg8_P4lH22OZ_lAugI.5C3z6tpz2QAfpeMeKKsyeYDXQHohQIH7
+
 ```
 
 **Consumer Secret:**
 ```
-06A0AA77D4EED4A66D84EFB9E42DC08844A9B10F62531FC0F62DD8E7C50F4CF1
+
 ```
 
 ---
@@ -38,14 +38,14 @@ If you need to pre-configure these in code (development only):
 
 ```javascript
 // This is what the extension stores internally after you save config:
-const oauthConfig = {
-  prod: {
-    clientId: '3MVG9PwZx9R6_Urdu_8Q5G0JlxXoog.3CrPg8_P4lH22OZ_lAugI.5C3z6tpz2QAfpeMeKKsyeYDXQHohQIH7',
-    clientSecret: '06A0AA77D4EED4A66D84EFB9E42DC08844A9B10F62531FC0F62DD8E7C50F4CF1',
-    redirectUri: chrome.identity.getRedirectURL(),
-    loginUrl: 'https://login.salesforce.com'
-  }
-}
+// const oauthConfig = {
+//   prod: {
+//     clientId: 'replace',
+//     clientSecret: 'replace',
+//     redirectUri: chrome.identity.getRedirectURL(),
+//     loginUrl: 'https://login.salesforce.com'
+//   }
+// }
 ```
 
 ---
