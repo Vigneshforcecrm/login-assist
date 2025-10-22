@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Salesforce OAuth Assistant",
+  "version": "2.0.0",
+  "description": "Manage Salesforce orgs with OAuth 2.0 - no passwords stored",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://login.salesforce.com/*",
+    "https://test.salesforce.com/*",
+    "https://*.salesforce.com/*",
+    "https://*.force.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Salesforce OAuth Assistant"
+  },
+  "options_ui": {
+    "page": "src/options/index.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://login.salesforce.com/*",
+        "https://test.salesforce.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
